@@ -1,0 +1,25 @@
+version: "2"
+
+linters:
+  default: none
+  enable:
+    - errcheck      # unchecked errors
+    - govet         # suspicious constructs (same as go vet)
+    - ineffassign   # assignments that are never used
+    - staticcheck   # broad static analysis (includes gosimple, nilerr, etc.)
+    - unused        # unused code
+    - misspell      # common English misspellings in comments
+    - bodyclose     # unclosed HTTP response bodies
+
+formatters:
+  enable:
+    - gofmt         # formatting
+    - goimports     # import grouping / ordering
+
+  settings:
+    goimports:
+      local-prefixes:
+        - rtp-play
+
+issues:
+  max-same-issues: 0
