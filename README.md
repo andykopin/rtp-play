@@ -43,7 +43,11 @@ Conversion between PCMU and PCMA is lossless and done via a lookup table (256 en
 ### 1. Start receiving with ffplay
 
 ```sh
-ffplay -protocol_whitelist file,udp,rtp -i stream.sdp
+ffplay -protocol_whitelist file,udp,rtp -i stream-pcma.sdp
+```
+or
+```sh
+ffplay -protocol_whitelist file,udp,rtp -i stream-pcmu.sdp
 ```
 
 ### 2. Send a test stream with ffmpeg
